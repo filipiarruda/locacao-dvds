@@ -41,6 +41,14 @@ Lembre-se de substituir o path do projeto para a pasta em que está rodando, cas
 
 As requisições estão em uma collection do Postman que está em um arquivo chamado: Teste Euro17.postman_collection.json
 
+##Diagrama do banco de dados
+
+Coloquei um diagrama simples do banco, pois como nesse projeto não foi feito relacionamento entre as tabelas, não foi necessário colocar o N:1 1:N e nem mesmo as tabelas de tratamento N:N que seria o caso, se um projeto como esse for ajustado para usar no mundo real.
+
+Mas deixo meu singelo diagrama, detalhando as tabelas criadas (tabelas não padrão do Laravel), seus campos e o tipo de cada campo.
+
+![Diagrama do DB](diagrama-db.jpg)
+
 ## Informações complementares
 
 *   A job de update de status de locação, para locação, foi pensada para absorver mudanças, como poder vincular a um campo ex.: customer\_id na própria tabela dvds, ou ainda uma tabela contendo as locações do dvd e os clientes vinculados a ela, e também a possibilidade de alterar para que receba dinamicamente o status que deve atribuir, podendo assim servir como uma job coringa, e que serviria tanto para locação (available = 0 - Indisponível para locação), ou (available = 1 disponível para locação).
