@@ -25,4 +25,26 @@ class CustomerController extends Controller
 
     }
 
+    public function list ()
+    {
+        $customers = Customer::all();
+
+        return response()->json([$customers], 200);
+    }
+
+    public function update (Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'string|max:255',
+            'email' => 'string|email|max:255|unique:customers',
+            'phone' => 'string|max:255',
+        ]);
+
+        $customer = Customer::findOrFail($id);
+
+        $customer->update($request->only(['name', 'email', 'phone']));
+
+        return response()->json(['message'=>'Cliente atualizado com sucesso', 'customer'=>$customer], 200);
+    }
+
 }

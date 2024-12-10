@@ -15,3 +15,5 @@ Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logo
 
 
 Route::middleware('auth:sanctum')->post('clientes/salvar', [CustomerController::class, 'store']);
+Route::middleware('auth:sanctum')->get('clientes/listar', [CustomerController::class, 'list']);
+Route::middleware('auth:sanctum')->put('clientes/{id}', [CustomerController::class, 'update']);
