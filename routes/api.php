@@ -14,6 +14,13 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
 
 
-Route::middleware('auth:sanctum')->post('clientes/salvar', [CustomerController::class, 'store']);
-Route::middleware('auth:sanctum')->get('clientes/listar', [CustomerController::class, 'list']);
-Route::middleware('auth:sanctum')->put('clientes/{id}', [CustomerController::class, 'update']);
+Route::prefix('clientes')->middleware('auth:sanctum')->group(function () {
+    Route::post('/salvar', [CustomerController::class, 'store']);
+    Route::get('/listar', [CustomerController::class, 'list']);
+    Route::put('/{id}', [CustomerController::class, 'update']);
+    Route::delete('/{id}', [CustomerController::class, 'delete']);
+});
+
+Route::prefix('dvds')->middleware('auth:sanctum')->group(function () {
+    //Route::post('/salvar', []);
+});
