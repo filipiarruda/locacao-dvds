@@ -27,4 +27,6 @@ Route::prefix('dvds')->middleware('auth:sanctum')->group(function () {
     Route::get('/listar', [DvdController::class, 'list']);
     Route::put('/{id}', [DvdController::class, 'update']);
     Route::delete('/{id}', [DvdController::class, 'delete']);
+    Route::post('/locacao', [DvdController::class, 'updateAvailable']);
+    Route::post('/devolucao', [DvdController::class, 'restitution']);
 });
