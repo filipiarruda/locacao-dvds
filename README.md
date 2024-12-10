@@ -39,7 +39,7 @@ Lembre-se de substituir o path do projeto para a pasta em que está rodando, cas
 
 ## Usando a API
 
-As requisições estão em uma collection do Postman que está em um arquivo chamado.
+As requisições estão em uma collection do Postman que está em um arquivo chamado: Teste Euro17.postman_collection.json
 
 ## Informações complementares
 
