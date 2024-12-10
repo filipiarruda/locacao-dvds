@@ -41,7 +41,7 @@ Lembre-se de substituir o path do projeto para a pasta em que está rodando, cas
 
 As requisições estão em uma collection do Postman que está em um arquivo chamado: Teste Euro17.postman_collection.json
 
-##Diagrama do banco de dados
+## Diagrama do banco de dados
 
 Coloquei um diagrama simples do banco, pois como nesse projeto não foi feito relacionamento entre as tabelas, não foi necessário colocar o N:1 1:N e nem mesmo as tabelas de tratamento N:N que seria o caso, se um projeto como esse for ajustado para usar no mundo real.
 
