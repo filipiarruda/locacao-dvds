@@ -6,7 +6,7 @@ O teste foi desenvolvido conforme os requisitos, porém adicionei uma camada de 
 
 ## 🚀 Como executar o projeto?
 
-*   Primeiro, precisa ter o PHP 8.2 ou superior instalados, conforme exigências do Laravel 11, versão que escolhi para usar.
+*   Primeiro, precisa ter o **PHP 8.2** ou superior instalados, conforme exigências do Laravel 11, versão que escolhi para usar.
 *   Configurar o .env com as credenciais do banco de dados MySQL.
 *   Instalar via composer com o comando `composer install`
 *   Executar o comando `php artisan migrate` para criar todas as tabelas no banco de dados
